@@ -1,4 +1,4 @@
-module module_name {
+module TwentyMinutesTillDawn {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;
