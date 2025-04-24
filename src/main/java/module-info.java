@@ -6,4 +6,5 @@ module TwentyMinutesTillDawn {
 
     exports views;
     opens views to javafx.fxml;
+    opens models to com.google.gson, javafx.base, javafx.fxml;
 }
