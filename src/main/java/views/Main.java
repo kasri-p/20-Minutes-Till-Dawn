@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import models.utils.CursorManager;
 import views.components.TextButton;
 
 public class Main extends Application {
@@ -32,6 +33,8 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainMenu.fxml"));
         Scene scene = new Scene(loader.load());
+
+        CursorManager.setCustomCursor(scene);
 
         stage.setTitle("20 Minutes Till Dawn");
         stage.setScene(scene);

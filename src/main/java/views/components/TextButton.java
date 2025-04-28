@@ -23,9 +23,9 @@ public class TextButton extends Button {
     private void initialize(double fontSize) {
         setFont(FontLoader.getCustomFont(fontSize));
 
-        setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: black;");
+        setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #990033;");
 
-        setOnMouseEntered(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #cccccc;"));
-        setOnMouseExited(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: black;"));
+        setOnMouseEntered(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #ffcccc;"));
+        setOnMouseExited(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #990033;"));
     }
 }
