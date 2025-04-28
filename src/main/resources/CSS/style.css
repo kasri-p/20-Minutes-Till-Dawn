@@ -1,14 +1,13 @@
 .button {
     -fx-font-family: "ChevyRay";
-    src: url("../resources/Font/ChevyRay.ttf");
     -fx-font-size: 16px;
 }
 
 .white-text {
-    -fx-fill: #ffffff !important;;
+    -fx-fill: #ffffff !important;
 }
 
 .start-menu-background {
-    -fx-background-image: url("../resources/Images/logo.png");
+    -fx-background-image: url("/Images/logo.png");
     -fx-background-size: cover;
 }

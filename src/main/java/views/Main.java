@@ -1,14 +1,11 @@
 package views;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import models.App;
-
-import java.net.URL;
 
 public class Main extends Application {
     public static void main(String[] args) {
@@ -17,19 +14,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        URL fontUrl = Main.class.getResource("/Font/ChevyRay.ttf");
-        if (fontUrl == null) {
-            System.err.println("Font file not found!");
-        } else {
-            Font.loadFont(fontUrl.toExternalForm(), 10);
-        }
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/FXML/StartMenu.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/CSS/style.css").toExternalForm());
+        // Load the custom font
+        Font customFont = Font.loadFont(getClass().getResourceAsStream("/Font/ChevyRay.ttf"), 20);
 
-        stage.setTitle("Twenty Minutes Till Dawn");
-        stage.setScene(scene);
+        Label label = new Label("Twenty Minutes Till Dawn");
+        label.setFont(customFont);
+        stage.setScene(new Scene(label, 400, 200));
         App.load();
         stage.show();
     }
