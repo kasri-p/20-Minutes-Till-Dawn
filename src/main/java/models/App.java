@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class App {
     private static Map<String, User> users;
+    private static User loggedInUser;
 
     public static void addUser(User user) {
         users.put(user.getUsername(), user);
@@ -21,5 +22,17 @@ public class App {
 
     public static void save() {
         FileStorage.saveUsers(users);
+    }
+
+    public static User getLoggedInUser() {
+        return loggedInUser;
+    }
+
+    public static void setLoggedInUser(User user) {
+        loggedInUser = user;
+    }
+
+    public static void logout() {
+        loggedInUser = null;
     }
 }

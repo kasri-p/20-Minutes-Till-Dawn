@@ -1,63 +1,14 @@
-.root {
-    -fx-font-family: 'Arial';
-}
-
-.game-button {
-    -fx-background-color: #851c1c;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
+* {
+    -fx-font-family: "ChevyRay";
+    src: url("../resources/Font/ChevyRay.ttf");
     -fx-font-size: 16px;
-    -fx-padding: 12px 24px;
-    -fx-background-radius: 5px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 0);
-    -fx-cursor: hand;
 }
 
-.game-button:hover {
-    -fx-background-color: #a22727;
+.white-text {
+    -fx-fill: #ffffff !important;;
 }
 
-.game-button:pressed {
-    -fx-background-color: #711818;
-}
-
-.game-text-field {
-    -fx-background-color: rgba(0, 0, 0, 0.7);
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-padding: 10px;
-    -fx-border-color: #851c1c;
-    -fx-border-width: 2px;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-}
-
-.game-combo-box {
-    -fx-background-color: rgba(0, 0, 0, 0.7);
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-border-color: #851c1c;
-    -fx-border-width: 2px;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-}
-
-.game-combo-box .cell {
-    -fx-background-color: rgba(0, 0, 0, 0.9);
-    -fx-text-fill: white;
-}
-
-.game-combo-box .list-view {
-    -fx-background-color: rgba(0, 0, 0, 0.9);
-    -fx-border-color: #851c1c;
-    -fx-border-width: 1px;
-}
-
-.game-combo-box .list-cell:hover {
-    -fx-background-color: #551111;
-    -fx-text-fill: white;
-}
-
-.button {
-    -fx-cursor: hand;
+.start-menu-background {
+    -fx-background-image: url("../resources/Images/logo.png");
+    -fx-background-size: cover;
 }
