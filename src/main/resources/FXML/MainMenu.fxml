@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <AnchorPane
         xmlns:fx="http://javafx.com/fxml"
         xmlns="http://javafx.com/javafx"
         fx:controller="views.Main"
         prefHeight="600.0" prefWidth="900.0">
+
+    <!-- Background Image -->
+    <ImageView fitWidth="900.0" fitHeight="600.0" preserveRatio="false">
+        <Image url="@/Images/background.png"/>
+    </ImageView>
 
     <BorderPane prefHeight="600.0" prefWidth="900.0">
         <center>

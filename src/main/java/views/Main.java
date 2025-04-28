@@ -9,6 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import models.utils.CursorManager;
+import models.utils.FontLoader;
 import views.components.TextButton;
 
 public class Main extends Application {
@@ -31,10 +32,19 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
 
+        // Load fonts before creating the scene
+        FontLoader.loadFonts();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainMenu.fxml"));
         Scene scene = new Scene(loader.load());
 
+        // Set custom cursor
         CursorManager.setCustomCursor(scene);
+
+        // Ensure the stage is set to a fixed size that matches your background image
+        stage.setWidth(900);
+        stage.setHeight(600);
+        stage.setResizable(false);
 
         stage.setTitle("20 Minutes Till Dawn");
         stage.setScene(scene);
@@ -43,10 +53,10 @@ public class Main extends Application {
 
     @FXML
     public void initialize() {
-        // Create text buttons
-        TextButton startButton = new TextButton("Play Game", 20);
-        TextButton settingsButton = new TextButton("Settings", 20);
-        TextButton quitButton = new TextButton("Quit", 20);
+        // Create text buttons with larger font size for better visibility over background
+        TextButton startButton = new TextButton("Play Game", 24);
+        TextButton settingsButton = new TextButton("Settings", 24);
+        TextButton quitButton = new TextButton("Quit", 24);
 
         // Set action handlers
         startButton.setOnAction(event -> handleStartButtonAction());
