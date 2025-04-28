@@ -7,11 +7,11 @@
 <AnchorPane
         xmlns:fx="http://javafx.com/fxml"
         xmlns="http://javafx.com/javafx"
-        fx:controller="views.StartMenu"
+        fx:controller="views.Main"
         styleClass="start-menu-background"
         prefHeight="600.0" prefWidth="900.0">
 
-    <BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-padding: 100px; -fx-background-color: #222222;">
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
         <center>
             <VBox alignment="CENTER" spacing="15">
                 <Button fx:id="startButton" text="Play Game" prefWidth="200"/>

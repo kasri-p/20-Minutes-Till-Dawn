@@ -1,26 +1,44 @@
 package views;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import models.App;
+import models.utils.FontLoader;
 
 public class Main extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
+    private Stage stage;
+
+    @FXML
+    private Button startButton;
 
     @Override
     public void start(Stage stage) throws Exception {
-        // Load the custom font
-        Font customFont = Font.loadFont(getClass().getResourceAsStream("/Font/ChevyRay.ttf"), 20);
+        this.stage = stage;
 
-        Label label = new Label("Twenty Minutes Till Dawn");
-        label.setFont(customFont);
-        stage.setScene(new Scene(label, 400, 200));
-        App.load();
+        // Use an FXMLLoader to set 'this' as the controller
+//        FXMLLoader loader = new FXMLLoader(url);
+//        AnchorPane root = loader.load();
+
+        Label label = new Label("20 Minutes Till Dawn");
+        label.setFont(FontLoader.getCustomFont(20));
+        Scene scene = new Scene(label);
+        stage.setScene(scene);
+        stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void initialize() {
+        // Set the font programmatically for this specific button
+        startButton.setFont(FontLoader.getCustomFont(16));
+    }
+
+    @FXML
+    private void handleExitButtonAction() {
+        Platform.exit();
     }
 }
