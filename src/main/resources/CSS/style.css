@@ -1,4 +1,4 @@
-* {
+.button {
     -fx-font-family: "ChevyRay";
     src: url("../resources/Font/ChevyRay.ttf");
     -fx-font-size: 16px;
