@@ -21,14 +21,11 @@ public class TextButton extends Button {
     }
 
     private void initialize(double fontSize) {
-        // Set the custom font
         setFont(FontLoader.getCustomFont(fontSize));
 
-        // Remove background and border
-        setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white;");
+        setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: black;");
 
-        // Add hover effect
         setOnMouseEntered(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #cccccc;"));
-        setOnMouseExited(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white;"));
+        setOnMouseExited(e -> setStyle("-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: black;"));
     }
 }

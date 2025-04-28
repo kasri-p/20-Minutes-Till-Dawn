@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.*?>
 <AnchorPane
         xmlns:fx="http://javafx.com/fxml"
@@ -11,10 +10,7 @@
 
     <BorderPane prefHeight="600.0" prefWidth="900.0">
         <center>
-            <VBox alignment="CENTER" spacing="15">
-                <Button fx:id="startButton" text="Play Game" prefWidth="200" onAction="#handleStartButtonAction"/>
-                <Button fx:id="settingsButton" text="Settings" prefWidth="200"/>
-                <Button fx:id="quitButton" text="Quit" prefWidth="200" onAction="#handleExitButtonAction"/>
+            <VBox fx:id="centerVBox" alignment="CENTER" spacing="15">
             </VBox>
         </center>
 
@@ -26,7 +22,6 @@
             </HBox>
         </top>
 
-        <!-- Container for text-only links at the bottom -->
         <bottom>
             <HBox fx:id="bottomNavBar" alignment="CENTER" spacing="20">
                 <padding>

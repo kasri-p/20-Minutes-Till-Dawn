@@ -5,22 +5,16 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import models.utils.FontLoader;
+import views.components.TextButton;
 
 public class Main extends Application {
     private Stage stage;
 
     @FXML
-    private Button startButton;
-
-    @FXML
-    private Button settingsButton;
-
-    @FXML
-    private Button quitButton;
+    private VBox centerVBox;
 
     @FXML
     private HBox topNavBar;
@@ -36,9 +30,9 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/StartMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainMenu.fxml"));
         Scene scene = new Scene(loader.load());
-        
+
         stage.setTitle("20 Minutes Till Dawn");
         stage.setScene(scene);
         stage.show();
@@ -46,16 +40,18 @@ public class Main extends Application {
 
     @FXML
     public void initialize() {
-        if (startButton != null) {
-            startButton.setFont(FontLoader.getCustomFont(16));
-        }
+        // Create text buttons
+        TextButton startButton = new TextButton("Play Game", 20);
+        TextButton settingsButton = new TextButton("Settings", 20);
+        TextButton quitButton = new TextButton("Quit", 20);
 
-        if (settingsButton != null) {
-            settingsButton.setFont(FontLoader.getCustomFont(16));
-        }
+        // Set action handlers
+        startButton.setOnAction(event -> handleStartButtonAction());
+        quitButton.setOnAction(event -> handleExitButtonAction());
 
-        if (quitButton != null) {
-            quitButton.setFont(FontLoader.getCustomFont(16));
+        // Add buttons to the center VBox
+        if (centerVBox != null) {
+            centerVBox.getChildren().addAll(startButton, settingsButton, quitButton);
         }
     }
 
