@@ -10,7 +10,6 @@
         fx:controller="views.Main"
         prefHeight="600.0" prefWidth="900.0">
 
-    <!-- Background Image -->
     <ImageView fitWidth="900.0" fitHeight="600.0" preserveRatio="false">
         <Image url="@/Images/background.png"/>
     </ImageView>
